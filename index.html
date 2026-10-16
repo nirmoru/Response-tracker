@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Response Tracker</title>
+    <link href="./Frontend/style.css" rel="stylesheet"></style>
+</head>
+<body>
+<div class="wrap" id="app">
+    <div class="lock-screen" id="lockScreen" style="display:none">
+        <h1> Response Tracker</h1>
+        <p class="sub">Enter the team password to continue</p>
+        <input type="password" id="pwInput" placeholder="Password" />
+        <button id="pwSubmit" style="width:100%">Unlock</button>
+        <p class="note" id="pwError" style="color:var(--danger); display:none">Incorrect password</p>
+    </div>
+
+    <div id="mainScreen" style="display:none">
+        <h1>Response Tracker</h1>
+        <div class="sub"> Generate the note and keep a shared log of entries</div>
+        <div class="card">
+            <div class="row">
+                <div>
+                    <label for="nameInput1">Name</label>
+                    <!-- <input id="nameInput" type="text" placeholder="e.g. Jordan"/> -->
+                    <select name="name1" id="nameInput1">
+                        <option value="" disabled selected>Pick a Name</option>
+                        <option value="Jeffrey">Jeffrey</option>
+                        <option value="Julian">Julian</option>
+                        <option value="Xavier">Xavier</option>
+                        <option value="Robert">Robert</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nameInput2">Name2</label>
+                    <select name="name2" id="nameInput2">
+                        <option value="" disabled selected>Pick a Name</option>
+                        <option value="Andrew">Andrew</option>
+                        <option value="Jason">Jason</option>
+                        <option value="Jon">Jon</option>
+                        <option value="Dantes">Dantes</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="type">Action</label>
+                    <select name="action" id="action">
+                        <option value="" disabled selected>Action</option>
+                        <option value="help" >Help</option>
+                        <option value="assist" >Assist</option>
+                        <option value="give" >Give</option>
+                        <option value="escort" >Escort</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="timeInput">Time (24hr, hhmm)</label>
+                    <input id="timeInput" type="numeric" maxlength="4" placeholder="e.g. 1430"/>
+                </div>
+            </div>
+                <div class="note" id="timeError" style="color:var(--danger); display:none;">Enter time as 4 digits, HHMM (0000–2359)</div>
+            <div>
+                <label> Generated text </label>
+                <div class="output" id="outputText">-</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./Backend/index.js"> </script>
+</html>
