@@ -1,5 +1,3 @@
-const TEAM_PASSWORD = "changeme";
-
 /// --- Lock Screen --- ///
 const lockScreen = document.getElementById("lockScreen");``
 const mainScreen = document.getElementById("mainScreen");``

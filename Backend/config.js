@@ -1,0 +1,1 @@
+const TEAM_PASSWORD = "1122"
