@@ -80,19 +80,19 @@ function refreshOutput(){
     const timeOk = isValidTime(t);
     timeError.style.display = (t.length > 0 && !timeOk ) ? "block" : "none";
 
-    if (name1 && name2 && timeOk){
+    if (name1 && name2 && t){
         switch (action) {
             case "help":
-                outputText.textContent = helpText(name1, name1, timeOk);
+                outputText.textContent = helpText(name1, name1, formatTimeDisplay(t));
                 break;
             case "assist":
-                outputText.textContent = assistText(name1, name2, timeOk);
+                outputText.textContent = assistText(name1, name2, formatTimeDisplay(t));
                 break;
             case "give":
-                outputText.textContent = giveText(name1, name2, timeOk);
+                outputText.textContent = giveText(name1, name2, formatTimeDisplay(t));
                 break;
             case "escort":
-                outputText.textContent = escortText(name1, name2, timeOk)
+                outputText.textContent = escortText(name1, name2, formatTimeDisplay(t))
                 break;
             default:
                 return 0;
