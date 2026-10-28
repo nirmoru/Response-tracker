@@ -8,9 +8,10 @@
 </head>
 <body>
 <div class="wrap" id="app">
-    <div class="lock-screen" id="lockScreen" style="display:none">
+    <div class="lock-screen" id="lockScreen" style="display:block">
         <h1> Response Tracker</h1>
-        <p class="sub">Enter the team password to continue</p>
+        <p class="user">Enter the username and password to continue</p>
+        <input type="username" id="userInput" placeholder="UserName" />
         <input type="password" id="pwInput" placeholder="Password" />
         <button id="pwSubmit" style="width:100%">Unlock</button>
         <p class="note" id="pwError" style="color:var(--danger); display:none">Incorrect password</p>
@@ -66,5 +67,7 @@
     </div>
 </div>
 </body>
-<script src="./Backend/index.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./Backend/config.js"></script>
+<script src="./Backend/app.js"> </script>
 </html>
